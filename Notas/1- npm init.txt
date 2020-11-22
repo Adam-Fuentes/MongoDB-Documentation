@@ -1,0 +1,14 @@
+en consola
+
+npm init
+package name: "poner nombre al proyecto"
+version: intro
+description: "poner descripcion"
+entry point: intro
+test command: intro
+git: repository: intro
+keywords: intro
+author: "nombre del 'proyect manager, guiño guiño'"
+license: intro x2
+
+listo!!!

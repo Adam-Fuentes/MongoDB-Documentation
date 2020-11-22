@@ -1,0 +1,41 @@
+ejemplo con nombres en CONSOLA
+
+use natours-test // crea si no esta creada o cambia a la bbdd
+quit() //sale de la sesion
+
+show dbs //muestra todas las bbdd
+show colletions //muestra todas las collecciones de tours
+
+db.tours.insertOne({})
+db.tours.insertMany([{},{}])
+
+db.tours.insertOne({ name: "The Forest Hiker", price: 297, rating: 4.7}) //añade una linea a tours
+db.tours.insertMany([{ name: "The Sea Explorer", price: 497, rating: 4.8}, { name: "The Snow Adventurer", price: 997, rating: 4.9, difficulty: "easy"}]) //añade varias lineas a tours
+
+db.tours.find() //saca todas los tours
+db.tours.find({name: "The Forest Hiker"}) //saca el tour "The Forest Hiker" tiene caps sensitve
+db.tours.find({difficulty: "easy"}) //saca todas los tours con difficulty "easy"
+
+$lte (less then equal) es un query operator en mongo db (así puedo buscar más)
+$lt (less then)
+$gte (grather then equal)
+$gt (grather then)
+
+$or: uno u otro
+
+db.tours.find({price: {$lte: 500}}) //saca todas los tours con precio menor o igual a 500
+db.tours.find({price: {$lt: 500}}) //saca todas los tours con precio menor a 500
+db.tours.find({price: {$lt: 500}, rating: {&gte 4.8}}) //saca todas los tours con precio menor a 500 y con un rating mayor igual a 4.8
+
+db.tours.find({ $or: [{price: {$lt: 500}}, {rating: {$gte: 4.8}}]}) //saca todos los precios menor a 500 o rating mayor igual a 4.8
+db.tours.find({ $or: [{price: {$gt: 500}}, {rating: {$gte: 4.8}}]}, {name: 1}) //saca todos los precios mayor a 500 o rating mayor igual a 4.8 pero solo el nombre
+
+db.tours.updateOne({name: "The Snow Adventurer"}, { $set: {price: 597} }) //en tours buscamos el the snow adventurer (el primero) y le modificamos el precio
+db.tours.updateMany({ price: {$gte:500}, rating: {gte: 4.8} }, { $set: {premium: true}}) //en tours busca los mayores iguales a 500 y 4.8 y les mete premium true
+
+db.tours.deleteMany({ rating: {$lt: 4.8} })
+db.tours.deleteMany({}) //borra todos...
+
+ejemplo con nombres en APP
+
+{price: {$lte: 500}}

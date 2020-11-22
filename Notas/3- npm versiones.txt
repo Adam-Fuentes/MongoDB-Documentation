@@ -1,0 +1,5 @@
+npm outdated 			-> dice si hay alguna versión sin actualizar
+npm install 		 	-> instala todas las dependencias y pquqtes necesarios
+npm install slugify@1.0.0 	-> instala la versión 1.0.0. de slugify
+npm install slugif		-> actualiza slugify
+npm uninstall slugif		-> desinstala slugify

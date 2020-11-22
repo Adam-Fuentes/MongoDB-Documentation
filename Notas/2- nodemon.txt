@@ -1,0 +1,24 @@
+¿Qué es nodemon?
+	es un escuchador para los cambios que vayamos haciendo, 
+	con esto no necesitamos estar parando y arrancando en cada save
+
+instalar nodemon
+
+npm install nodemon --save-dev
+o (el siguiente es para que esté siempre en nuestro pc)
+npm i nodemon --global
+
+iniciar nodemon manualmente
+
+nodemon .\index.js
+
+iniciar nodemon siempre
+
+en el package.json
+ "scripts": {
+    "start": "nodemon index.js"
+  },
+
+en consola (así se inicia el proceso al abrir de nuevo el ide)
+
+npm run start

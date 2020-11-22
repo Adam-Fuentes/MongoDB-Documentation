@@ -1,0 +1,2 @@
+explorador		ctrl+shift+e
+comentar bloque		ctrl+k+c

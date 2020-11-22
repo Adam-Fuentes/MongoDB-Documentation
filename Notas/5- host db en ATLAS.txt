@@ -1,0 +1,10 @@
+https://www.mongodb.com/cloud/atlas
+
+pass 9mFNuwY!kSGDjA7
+
+crear nuevo proyecto
+poner nombre
+poner permisos
+
+crear proyecto
+build a cluster
